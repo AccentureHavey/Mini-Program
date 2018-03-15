@@ -37,7 +37,7 @@ Page({
   aboutUs: function () {
     wx.showModal({
       title: '关于我们',
-      content: '本系统基于开源小程序商城系统 https://github.com/EastWorld/wechat-app-mall 搭建，祝大家使用愉快！',
+      content: 'havey基于Git开源项目开发',
       showCancel: false
     })
   },
@@ -52,7 +52,7 @@ Page({
     }
     var that = this;
     wx.request({
-      url: 'https://api.it120.cc/' + app.globalData.subDomain + '/user/wxapp/bindMobile',
+      url: 'https://api.it120.cc/havey/user/wxapp/bindMobile',
       data: {
         token: app.globalData.token,
         encryptedData: e.detail.encryptedData,
@@ -79,7 +79,7 @@ Page({
   getUserApiInfo: function () {
     var that = this;
     wx.request({
-      url: 'https://api.it120.cc/' + app.globalData.subDomain + '/user/detail',
+      url: 'https://api.it120.cc/havey/user/detail',
       data: {
         token: app.globalData.token
       },
@@ -97,7 +97,7 @@ Page({
   getUserAmount: function () {
     var that = this;
     wx.request({
-      url: 'https://api.it120.cc/' + app.globalData.subDomain + '/user/amount',
+      url: 'https://api.it120.cc/havey/user/amount',
       data: {
         token: app.globalData.token
       },
@@ -116,7 +116,7 @@ Page({
   checkScoreSign: function () {
     var that = this;
     wx.request({
-      url: 'https://api.it120.cc/' + app.globalData.subDomain + '/score/today-signed',
+      url: 'https://api.it120.cc/havey/score/today-signed',
       data: {
         token: app.globalData.token
       },
@@ -132,7 +132,7 @@ Page({
   scoresign: function () {
     var that = this;
     wx.request({
-      url: 'https://api.it120.cc/' + app.globalData.subDomain + '/score/sign',
+      url: 'https://api.it120.cc/havey/score/sign',
       data: {
         token: app.globalData.token
       },
